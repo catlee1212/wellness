@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wellness</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header id="screen">
+    <div class="topbar">
+      <img src="logo.svg" id="logo" alt="Wellness Logo">
+      <div class="menu-wrap" aria-hidden="true">
+        <button id="burger" aria-label="Menue">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div id="fake-menu">
+          <span>Startseite</span>
+          <span>Angebote</span>
+          <span>Kontakt</span>
+        </div>
+      </div>
+    </div>
+    <img src="header.jpg.png" id="wellness" alt="Wellness Header Bild">
+  </header>
+
+  <main>
+    <section id="skeleton" aria-hidden="true">
+      <div class="sk-card">
+        <span class="sk-line sk-line-lg"></span>
+        <span class="sk-line"></span>
+        <span class="sk-line"></span>
+        <span class="sk-line sk-line-mid"></span>
+        <span class="sk-line"></span>
+        <span class="sk-line sk-line-mid"></span>
+        <span class="sk-line"></span>
+        <span class="sk-line sk-line-short"></span>
+      </div>
+      <div class="sk-card">
+        <span class="sk-line sk-line-lg"></span>
+        <span class="sk-line"></span>
+        <span class="sk-line sk-line-mid"></span>
+        <span class="sk-line"></span>
+        <span class="sk-line"></span>
+        <span class="sk-line sk-line-mid"></span>
+        <span class="sk-line sk-line-short"></span>
+      </div>
+      <div class="sk-card">
+        <span class="sk-line sk-line-lg"></span>
+        <span class="sk-line"></span>
+        <span class="sk-line"></span>
+        <span class="sk-line sk-line-mid"></span>
+        <span class="sk-line"></span>
+        <span class="sk-line sk-line-mid"></span>
+        <span class="sk-line sk-line-short"></span>
+      </div>
+    </section>
+  </main>
+
+  <div id="popup">
+    <p>Seite reagiert nicht...</p>
+    <button id="continue">erneut versuchen</button>
+  </div>
+
+  <script>
+
+    setTimeout(() => {
+      document.body.classList.add("flash")
+    }, 2000)
+
+    setTimeout(() => {
+      document.getElementById("wellness").classList.add("glitch")
+      document.body.style.cursor = "wait"
+    }, 2500)
+
+    setTimeout(() => {
+      document.getElementById("wellness").classList.remove("glitch")
+      document.getElementById("popup").style.display = "block"
+    }, 4500)
+
+    document.getElementById("continue").onclick = () => {
+      window.location.href = "https://example.com"
+    }
+
+  </script>
+
+</body>
+
+</html>
