@@ -65,6 +65,8 @@
     </section>
   </main>
 
+  <div id="popup-overlay" aria-hidden="true"></div>
+
   <div id="popup">
     <p>Seite reagiert nicht...</p>
     <button id="continue">erneut versuchen</button>
@@ -83,6 +85,7 @@
 
     setTimeout(() => {
       document.getElementById("wellness").classList.remove("glitch")
+      document.getElementById("popup-overlay").style.display = "block"
       document.getElementById("popup").style.display = "block"
     }, 4500)
 
